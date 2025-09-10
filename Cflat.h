@@ -39,6 +39,11 @@
 #include <map>
 #include <string>
 
+#if _MSC_VER
+#pragma warning(push)
+#pragma warning(disable: 4996)
+#endif//_MSC_VER
+
 #include "CflatConfig.h"
 #include "CflatMacros.h"
 
@@ -1631,3 +1636,7 @@ namespace Cflat
       void resetStatics();
    };
 }
+
+#if _MSC_VER
+#pragma warning(pop)
+#endif//_MSC_VER

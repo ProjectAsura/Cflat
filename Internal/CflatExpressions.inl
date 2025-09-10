@@ -28,6 +28,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+#if _MSC_VER
+#pragma warning(push)
+#pragma warning(disable: 4996)
+#endif//_MSC_VER
 
 namespace Cflat
 {
@@ -506,3 +510,7 @@ namespace Cflat
       }
    };
 }
+
+#if _MSC_VER
+#pragma warning(pop)
+#endif//_MSC_VER

@@ -36,6 +36,10 @@
 #include "Internal/CflatStatements.inl"
 #include "Internal/CflatErrorMessages.inl"
 
+#if _MSC_VER
+#pragma warning(push)
+#pragma warning(disable: 4996)
+#endif//_MSC_VER
 
 //
 //  Memory
@@ -9591,3 +9595,7 @@ void Environment::resetStatics()
    // Clear values for local statics
    mLocalStaticValues.clear();
 }
+
+#if _MSC_VER
+#pragma warning(pop)
+#endif//_MSC_VER
